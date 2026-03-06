@@ -192,14 +192,4 @@ function setChip(btn, chip) {
 }
 
 
-if (!DB.get().length) {
-  DB.save([
-    { id:'1', title:'Submit Capstone Proposal', note:'Email to adviser',     date:'Today',     priority:'high',   category:'Capstone', done:false, created: new Date().toISOString() },
-    { id:'2', title:'Review Python OOP',        note:'Chapter 5 exercises',  date:'Today',     priority:'medium', category:'School',   done:false, created: new Date().toISOString() },
-    { id:'3', title:'Buy groceries',            note:'Rice, eggs, sardines', date:'Tomorrow',  priority:'low',    category:'Personal', done:false, created: new Date().toISOString() },
-    { id:'4', title:'Push to GitHub',           note:"Don't forget README",  date:'This week', priority:'medium', category:'Capstone', done:false, created: new Date().toISOString() },
-    { id:'5', title:'Morning jog 30 mins',      note:'',                     date:'Tomorrow',  priority:'low',    category:'Health',   done:false, created: new Date().toISOString() },
-  ]);
-}
-
 render();

@@ -1,11 +1,11 @@
-
+/* ── BOTTOM NAV ───────────────────────────────────────────── */
 .bottom-nav {
-  background: #ffffff;
-  border-top: 1.5px solid #eaecf4;
+  background: var(--surface);
+  border-top: 1.5px solid var(--border);
   display: flex;
   padding: 6px 0 max(14px, env(safe-area-inset-bottom));
   flex-shrink: 0;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+  box-shadow: var(--nav-shadow);
 }
 .nav-btn {
   flex: 1;
@@ -22,32 +22,30 @@
   transition: transform 0.15s;
 }
 .nav-btn:active { transform: scale(0.85); }
-
 .nav-lbl {
   font-size: 0.62rem;
   font-weight: 700;
-  color: #b8bcd0;
+  color: var(--text-sub);
   letter-spacing: 0.3px;
   transition: color 0.2s;
 }
 .nav-btn svg {
-  stroke: #b8bcd0;
+  stroke: var(--text-sub);
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: stroke 0.2s;
+  color: var(--text-sub);
 }
-
-/* Active state */
-.nav-btn.active svg    { stroke: #3b5bff; }
-.nav-btn.active .nav-lbl { color: #3b5bff; }
+.nav-btn.active svg    { stroke: var(--blue); color: var(--blue); }
+.nav-btn.active .nav-lbl { color: var(--blue); }
 .nav-btn.active::before {
   content: '';
   position: absolute;
   top: 0; left: 50%;
   transform: translateX(-50%);
   width: 28px; height: 3px;
-  background: #3b5bff;
+  background: var(--blue);
   border-radius: 0 0 6px 6px;
 }

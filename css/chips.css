@@ -1,4 +1,4 @@
-
+/* ── FILTER CHIPS ─────────────────────────────────────────── */
 .chips {
   display: flex;
   gap: 8px;
@@ -8,7 +8,6 @@
   scrollbar-width: none;
 }
 .chips::-webkit-scrollbar { display: none; }
-
 .chip {
   padding: 8px 18px;
   border-radius: 100px;
@@ -17,14 +16,14 @@
   white-space: nowrap;
   cursor: pointer;
   border: none;
-  background: #ffffff;
-  color: #9499b0;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  background: var(--surface);
+  color: var(--text-muted);
+  box-shadow: var(--card-shadow);
   transition: all 0.2s;
 }
 .chip.active {
-  background: #3b5bff;
+  background: var(--blue);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(59,91,255,0.32);
+  box-shadow: 0 4px 16px var(--blue-shadow);
 }
 .chip:active { transform: scale(0.92); }
